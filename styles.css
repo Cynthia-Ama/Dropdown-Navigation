@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.navCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.navLogo h1{
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.navButton button{
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.list-container{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.list-container > li{
+    font-size: 1.2rem;
+}
+
+.navLinksOne .list-container > li{
+    color: hsl(0, 0%, 41%);
+}
+
+.navLinksOne .list-container > li:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+.hidden-list{
+    margin-top: 10px;
+    margin-left: 25px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.show-hidden-list{
+    display: flex;
+    display: block;
+}
+
+.list-container > li:first-child span, .list-container > li:nth-child(2) span{
+    cursor: pointer;
+}
+
+.show-list{
+    display: inline;
+}
+
+.hide-list{
+    display: none;
+}
+
+.hidden-list > li{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;;
+}
+
+.navLinksOne, .navLinksTwo{
+    display: none;
+}
+
+@media screen and (min-width:900px){
+   .navLinksOne, .navLinksTwo{
+    display: flex;
+   } 
+
+   .navCenter{
+    align-items: center;
+    padding: 30px 90px;
+   }
+
+   .navButton{
+    display: none;
+   }
+
+   .hidden-list{
+    position: fixed;
+   }
+}
+
+/* sidebar */
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: none;
+}
+
+.open-sidebar{
+    display: block;
+}
+
+.sidebar > div{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+}
+
+.sidebarButton button{
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.sidebar .list-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarContentTwo{
+    align-self: center;
+    text-align: center;
+}
+
+.sidebarContentTwo .list-container li:last-child{
+    border: 1px solid black;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+main{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 100vw;
+}
+
+.section-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-image-container{
+    background: url('./assets/image-hero-mobile.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
+.section-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.section-content h1{
+    font-size: 2.5rem;
+}
+
+.section-content p{
+    line-height: 35px;
+    font-size: 1.2rem;
+}
+
+.section-content button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+.section-content-images{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.section-content-images > div img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (min-width:900px){
+    .sidebar{
+        display: none;
+    }
+
+    main{
+        flex-direction: row-reverse;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 80px auto 10px auto;
+        align-items: flex-start;
+        padding: 10px 80px;
+    }
+
+    main section{
+        flex: 1;
+    } 
+
+    .section-image-container{
+        background: url('/assets/image-hero-desktop.png');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 600px;
+    }
+
+    .section-content{
+        text-align: justify;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .section-content h1{
+        font-size: 4rem;
+        width: 84%;
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+    }
+
+    .section-content p{
+        font-size: 1.1rem;
+        line-height: 30px;
+        width: 90%;
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+    }
+
+    .section-content-images{
+        margin-top: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+}

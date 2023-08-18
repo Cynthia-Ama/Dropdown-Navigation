@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Dropdown Navigation</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="navCenter">
+        <div class="navLogo">
+          <h1>Snap</h1>
+        </div>
+        <div class="navButton">
+          <button class="navBtn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="navLinksOne">
+          <ul class="list-container">
+            <li>
+              Features
+              <span class="show-list" id="show-list-one"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+              <span class="hide-list" id="hide-list-one"
+                ><i class="fa-solid fa-angle-up"></i
+              ></span>
+              <ul class="hidden-list" id="hidden-list-one">
+                <li>
+                  <span style="color: #7650f2"
+                    ><i class="fas fa-tasks"></i></span
+                  >TodoList
+                </li>
+                <li>
+                  <span style="color: #66cee3"
+                    ><i class="fa-solid fa-calendar"></i></span
+                  >Calender
+                </li>
+                <li>
+                  <span style="color: #f0e462"
+                    ><i class="fa-solid fa-bell"></i></span
+                  >Reminders
+                </li>
+                <li>
+                  <span style="color: #ce3af0"
+                    ><i class="fa-solid fa-clock"></i></span
+                  >Planning
+                </li>
+              </ul>
+            </li>
+            <li>
+              Company
+              <span class="show-list" id="show-list-two"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+              <span class="hide-list" id="hide-list-two"
+                ><i class="fa-solid fa-angle-up"></i
+              ></span>
+              <ul class="hidden-list" id="hidden-list-two">
+                <li>History</li>
+                <li>Our Tean</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <div class="navLinksTwo">
+          <ul class="list-container">
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <aside class="sidebar">
+      <div class="sidebarButton">
+        <button class="closeSidebar">X</button>
+        <div class="sidebarContentOne">
+          <ul class="list-container">
+            <li>
+              Features
+              <span class="show-list" id="show-list-three"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+              <span class="hide-list" id="hide-list-three"
+                ><i class="fa-solid fa-angle-up"></i
+              ></span>
+              <ul class="hidden-list" id="hidden-list-three">
+                <li>
+                  <span style="color: #7650f2"
+                    ><i class="fas fa-tasks"></i></span
+                  >TodoList
+                </li>
+                <li>
+                  <span style="color: #66cee3"
+                    ><i class="fa-solid fa-calendar"></i></span
+                  >Calender
+                </li>
+                <li>
+                  <span style="color: #f0e462"
+                    ><i class="fa-solid fa-bell"></i></span
+                  >Reminders
+                </li>
+                <li>
+                  <span style="color: #ce3af0"
+                    ><i class="fa-solid fa-clock"></i></span
+                  >Planning
+                </li>
+              </ul>
+            </li>
+            <li>
+              Company
+              <span class="show-list" id="show-list-four"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+              <span class="hide-list" id="hide-list-four"
+                ><i class="fa-solid fa-angle-up"></i
+              ></span>
+              <ul class="hidden-list" id="hidden-list-four">
+                <li>History</li>
+                <li>Our Tean</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <div class="sidebarContentTwo">
+          <ul class="list-container">
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section class="section-image">
+        <div class="section-image-container"></div>
+      </section>
+      <section class="section-content">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button>Learn more</button>
+        <div class="section-content-images">
+          <div>
+            <img src="./assets/client-databiz.svg" alt="databiz" />
+          </div>
+          <div>
+            <img src="./assets/client-audiophile.svg" alt="audiophile" />
+          </div>
+          <div>
+            <img src="./assets/client-maker.svg" alt="client-maker" />
+          </div>
+          <div>
+            <img src="./assets/client-meet.svg" alt="client-meet" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
